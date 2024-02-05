@@ -13,7 +13,7 @@ const App = () => {
             {isTrueView ? (
                 <div className="min-h-screen bg-pastel-green text-gray-800 flex flex-col justify-center items-center">
                     {/* Navigation Bar */}
-                    <nav className="bg-white shadow-md p-4 rounded-lg">
+                    <nav className="bg-white shadow-md p-4 rounded-lg hidden">
                         <ul className="flex justify-between">
                             <li className="mr-6">
                                 <a href="#" className="text-lg font-semibold">Home</a>
