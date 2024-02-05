@@ -4,7 +4,7 @@ const App = () => {
   return (
     <div className="min-h-screen bg-pastel-green text-gray-800 flex flex-col justify-center items-center">
       {/* Navigation Bar */}
-      <nav className="bg-white shadow-md p-4">
+      <nav className="bg-white shadow-md p-4 rounded-lg">
         <ul className="flex justify-between">
           <li className="mr-6">
             <a href="#" className="text-lg font-semibold">Home</a>
@@ -42,7 +42,7 @@ const App = () => {
 
 
       {/* Contact Bar */}
-      <footer className="bg-white shadow-md p-4 mt-8">
+      <footer className="bg-white shadow-md p-4 mt-8 rounded-lg">
         <p className="text-lg font-semibold">Contact</p>
         <ul className="flex space-x-4 mt-2">
           <li>
