@@ -1,61 +1,65 @@
-import './App.css';
-import React, { useState } from 'react';
+import "./App.css";
+import React, { useState } from "react";
+import ColorPicker from "./ColorPicker";
+import Middle from "./Personal";
 
 const App = () => {
-  const [isTrueView, setIsTrueView] = useState(true);
+  const [view, setView] = useState("homepage");
 
-  const toggleView = () => {
-    setIsTrueView(!isTrueView);
+  const toggleView = (v) => {
+    setView(v)
   };
 
   return (
     <div>
-      {isTrueView ? (
-        <div className="min-h-screen bg-pastel-green text-gray-800 flex flex-col justify-center items-center">
+      {view === "homepage" ? (
+        <div className="min-h-screen text-gray-800 flex flex-col justify-center items-center">
+          <header className="bg-white shadow-md p-4 mb-8 rounded-lg max-w-lg border border-green-500">
+            <ul className="flex space-x-20 mt-2">
+              <li>
+                <button onClick={() => toggleView("cp")} className="hover:underline">Color Picker</button>
+              </li>
+              <li>
+                <a className="text-pastel-green hover:underline">Sphere</a>
+              </li>
+            </ul>
+          </header>
 
-          {/* Main Content */}
-          <div className="max-w-lg p-8 bg-white shadow-lg rounded-md border border-green-500">
-            <h1 className="text-4xl font-bold text-gray-800 mb-4">Paras Adhikari</h1>
-            <p className="text-gray-600 mb-6">Software Developer</p>
-            <div className="bg-green-100 p-6 rounded-md mb-8">
-              <h2 className="text-lg font-bold text-gray-800 mb-2">About Me</h2>
-              <p className="text-gray-600">I'm a passionate Software Developer with a keen interest in creating user-friendly programs and applications.</p>
-            </div>
-            <div className="bg-green-100 p-6 rounded-md">
-              <h2 className="text-lg font-bold text-gray-800">Skills</h2>
-              <ul className=" text-gray-600 list-none">
-                <li>Java</li>
-                <li>Python</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Tailwind CSS</li>
-              </ul>
-            </div>
-          </div>
+          <Middle></Middle>
 
-
-          {/* Contact Bar */}
           <footer className="bg-white shadow-md p-4 mt-8 rounded-lg max-w-lg border border-green-500">
             <p className="text-lg font-semibold">Contact</p>
-            <ul className="flex space-x-40 mt-2 underline">
+            <ul className="flex space-x-40 mt-2">
               <li>
-                <button className="underline" onClick={toggleView}>Email</button>
+                <button className="hover:underline" onClick={() => toggleView("email")}>Email</button>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/paras-adhikari-247726245/" className="text-pastel-green hover:underline">LinkedIn</a>
+                <a
+                  href="https://www.linkedin.com/in/paras-adhikari-247726245/"
+                  className="text-pastel-green hover:underline">LinkedIn</a>
               </li>
               <li>
-                <a href="https://github.com/parasxdhikari" className="text-pastel-green hover:underline">GitHub</a>
+                <a href="https://github.com/parasxdhikari"
+                  className="text-pastel-green hover:underline">GitHub</a>
               </li>
             </ul>
           </footer>
-
         </div>
+
+      ) : view === "cp" ? (
+        <>
+          <div className="relative">
+            <ColorPicker />
+            <button onClick={() => toggleView("homepage")} className="hover:underline absolute top-2 left-1/2 -translate-x-1/2 bg-slate-400 py-2 px-4 rounded">
+              Home
+            </button>
+          </div>
+        </>
+
       ) : (
         <div className="min-h-screen flex flex-col justify-center items-center">
           <p className="text-4xl mb-2">parasad612@gmail.com</p>
-          <button onClick={toggleView}>Back</button>
-          {/* Additional components or content for the false case */}
+          <button onClick={() => toggleView("homepage")}>back</button>
         </div>
       )}
     </div>
