@@ -35,21 +35,21 @@ function Scroll() {
                 <h1>This is a demo</h1>
             </section>
 
-            <section className='inner-element mt-2'>
+            <section className='inner-element mt-20'>
                 <h2>
                     The things you own end up owning you.
                 </h2>
             </section>
 
-            <section className='inner-element mt-2'>
+            <section className='inner-element mt-20'>
                 <h1>It's only after you lose everything</h1>
             </section>
 
-            <section className='inner-element mt-2'>
+            <section className='inner-element mt-20'>
                 <h1>that you're free to do anything.</h1>
             </section>
 
-            <section className='inner-element mt-2'>
+            <section className='inner-element mt-20'>
                 <h2>THE END.</h2>
             </section>
         </div>
