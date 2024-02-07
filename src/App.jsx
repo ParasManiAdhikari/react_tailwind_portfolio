@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 import ColorPicker from "./ColorPicker";
 import Middle from "./Personal";
+import CopyToClipboard from "./CopyToClipboard";
 
 const App = () => {
   const [view, setView] = useState("homepage");
@@ -50,7 +51,7 @@ const App = () => {
         <>
           <div className="relative">
             <ColorPicker />
-            <button onClick={() => toggleView("homepage")} className="hover:underline absolute top-2 left-1/2 -translate-x-1/2 bg-slate-400 py-2 px-4 rounded">
+            <button onClick={() => toggleView("homepage")} className="hover:underline absolute top-2 left-1/2 -translate-x-1/2 bg-slate-300 py-2 px-4 rounded">
               Home
             </button>
           </div>
@@ -58,8 +59,8 @@ const App = () => {
 
       ) : (
         <div className="min-h-screen flex flex-col justify-center items-center">
-          <p className="text-4xl mb-2">parasad612@gmail.com</p>
-          <button onClick={() => toggleView("homepage")}>back</button>
+          <CopyToClipboard/>
+          <button onClick={() => toggleView("homepage")} className="hover:underline mt-3 bg-slate-300 py-2 px-4 rounded">Back</button>
         </div>
       )}
     </div>
