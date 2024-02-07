@@ -23,7 +23,7 @@ const App = () => {
                 <button onClick={() => toggleView("cp")} className="hover:underline">Color Picker</button>
               </li>
               <li>
-                <button onClick={() => toggleView("scroll")} className="hover:underline">Scroll</button>
+                <button onClick={() => toggleView("scroll")} className="hover:underline">Scroll Page</button>
               </li>
             </ul>
           </header>
