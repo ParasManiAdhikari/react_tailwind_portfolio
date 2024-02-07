@@ -15,8 +15,9 @@ const App = () => {
     <div>
       {view === "homepage" ? (
         <div className="min-h-screen text-gray-800 flex flex-col justify-center items-center">
+          
           <header className="bg-white shadow-md p-4 mb-8 rounded-lg max-w-lg border border-green-500">
-            <ul className="flex space-x-20 mt-2">
+            <ul className="flex space-x-20">
               <li>
                 <button onClick={() => toggleView("cp")} className="hover:underline">Color Picker</button>
               </li>
@@ -29,8 +30,7 @@ const App = () => {
           <Middle></Middle>
 
           <footer className="bg-white shadow-md p-4 mt-8 rounded-lg max-w-lg border border-green-500">
-            <p className="text-lg font-semibold">Contact</p>
-            <ul className="flex space-x-40 mt-2">
+            <ul className="flex space-x-40">
               <li>
                 <button className="hover:underline" onClick={() => toggleView("email")}>Email</button>
               </li>
