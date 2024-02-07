@@ -59,7 +59,7 @@ const App = () => {
 
       ) : (
         <div className="min-h-screen flex flex-col justify-center items-center">
-          <CopyToClipboard/>
+          <CopyToClipboard text="parasad612@gmail.com"/>
           <button onClick={() => toggleView("homepage")} className="hover:underline mt-3 bg-slate-300 py-2 px-4 rounded">Back</button>
         </div>
       )}

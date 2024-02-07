@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
-function CopyToClipboard() {
+function CopyToClipboard(props) {
   const [copied, setCopied] = useState(false);
-  const textToCopy = "parasad612@gmail.com";
+  const textToCopy = props.text;
 
   const copyToClipboard = async () => {
     try {
