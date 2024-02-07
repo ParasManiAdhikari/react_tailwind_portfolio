@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import ColorPicker from "./ColorPicker";
 import Middle from "./Personal";
 import CopyToClipboard from "./CopyToClipboard";
+import Scroll from "./Scroll";
 
 const App = () => {
   const [view, setView] = useState("homepage");
@@ -14,22 +15,22 @@ const App = () => {
   return (
     <div>
       {view === "homepage" ? (
-        <div className="min-h-screen text-gray-800 flex flex-col justify-center items-center">
-          
-          <header className="bg-white shadow-md p-4 mb-8 rounded-lg max-w-lg border border-green-500">
+        <div className="min-h-screen text-white flex flex-col justify-center items-center">
+
+          <header className="bg-zinc-800 shadow-md p-4 mb-8 rounded-lg max-w-lg border border-green-800">
             <ul className="flex space-x-20">
               <li>
                 <button onClick={() => toggleView("cp")} className="hover:underline">Color Picker</button>
               </li>
               <li>
-                <a className="text-pastel-green hover:underline">Sphere</a>
+                <button onClick={() => toggleView("scroll")} className="hover:underline">Scroll</button>
               </li>
             </ul>
           </header>
 
           <Middle></Middle>
 
-          <footer className="bg-white shadow-md p-4 mt-8 rounded-lg max-w-lg border border-green-500">
+          <footer className="bg-zinc-800 shadow-md p-4 mt-8 rounded-lg max-w-lg border border-green-800">
             <ul className="flex space-x-40">
               <li>
                 <button className="hover:underline" onClick={() => toggleView("email")}>Email</button>
@@ -51,16 +52,21 @@ const App = () => {
         <>
           <div className="relative">
             <ColorPicker />
-            <button onClick={() => toggleView("homepage")} className="hover:underline absolute top-2 left-1/2 -translate-x-1/2 bg-slate-300 py-2 px-4 rounded">
+            <button onClick={() => toggleView("homepage")} className="hover:underline absolute top-2 left-1/2 -translate-x-1/2 bg-zinc-800 text-green-100 py-2 px-4 rounded">
               Home
             </button>
           </div>
         </>
 
+      ) : view === "scroll" ? (
+        <>
+          <Scroll />
+          <button onClick={() => toggleView("homepage")} className="hover:underline absolute top-2 left-1/2 -translate-x-1/2 bg-zinc-800 text-green-100 py-2 px-4 rounded">Home</button>
+        </>
       ) : (
-        <div className="min-h-screen flex flex-col justify-center items-center">
-          <CopyToClipboard text="parasad612@gmail.com"/>
-          <button onClick={() => toggleView("homepage")} className="hover:underline mt-3 bg-slate-300 py-2 px-4 rounded">Back</button>
+        <div className="min-h-screen flex flex-col justify-center items-center text-green-100">
+          <CopyToClipboard text="parasad612@gmail.com" />
+          <button onClick={() => toggleView("homepage")} className="hover:underline mt-3 bg-zinc-800 py-2 px-4 rounded">Back</button>
         </div>
       )}
     </div>
