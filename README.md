@@ -4,7 +4,7 @@
 
 Practicing & Building a React JS Single Page Application in order to develop Tailwind skills.
 
-### DEMO ONLINE @ https://parasxdhikari.github.io/test/
+### DEMO ONLINE @ https://ParasManiAdhikari.github.io/test/
 
 ## Contents
 - Homepage
