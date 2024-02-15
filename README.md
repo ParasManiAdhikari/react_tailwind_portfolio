@@ -10,4 +10,5 @@ Practicing & Building a React JS Single Page Application in order to develop Tai
 - Homepage
 - Scoll page - Animation based on User Intereaction (Scrolling)
 - Colour Picker
+- Gallery - Selecting animation for Photos
 - Email
